@@ -77,3 +77,21 @@
 | Log Management | AWS CloudWatch Logs (확장 예정) | 백엔드 로그 수집, 검색 및 관리 |
 | Monitoring | AWS CloudWatch (확장 예정) | 서버 및 애플리케이션 모니터링 |
 | Object Storage | Amazon S3 (확장 예정) | 이미지 및 파일 저장 |
+
+
+
+## 🗂️ Database Design
+
+
+#### 테이블 구성
+
+| **테이블** | **한글명** | **역할** |
+| --- | --- | --- |
+| `QUALIFICATION_CATEGORY` | 자격증 분류 | 계층형 카테고리 관리 (`parent_id`로 다단계 확장) |
+| `QUALIFICATION` | 자격증 정보 | 자격증 기본 정보 및 활성화 여부 관리 |
+| `EXAM_SESSION` | 시험 회차 | 연도·회차·시험 단계별 시험 일정 관리 |
+| `EXAM_PAPER` | 시험지 | 회차별 시험지(과목·유형) 및 원문 URL 관리 |
+| `QUESTION` | 문제 | 문제 번호·유형·내용 및 해설 관리 |
+| `EXAM_SPECIFICATION` | 출제 기준 | 자격증별 출제 기준 및 적용 기간 관리 |
+
+```
